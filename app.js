@@ -35,7 +35,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://admin-taha:taha92basra@cluster0.5spjo.mongodb.net/userDb",{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema ({
